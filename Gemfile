@@ -9,6 +9,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'haml-rails'
+gem 'devise'
+
 
 group :development, :test do
   gem 'byebug'
@@ -16,4 +19,8 @@ group :development, :test do
   gem 'spring'
   gem 'hirb'
   gem 'hirb-unicode'
+end
+
+group :development do
+  gem 'letter_opener', '~> 1.1.0'
 end
