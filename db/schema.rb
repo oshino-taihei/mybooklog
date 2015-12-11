@@ -11,7 +11,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202215045) do
+ActiveRecord::Schema.define(version: 20151211074118) do
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.string   "asin"
+    t.string   "author"
+    t.string   "publisher"
+    t.date     "published_at"
+    t.integer  "price"
+    t.string   "url"
+    t.string   "image"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "category_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "follows", force: :cascade do |t|
+    t.integer  "from_user_id"
+    t.integer  "to_user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.integer  "status"
+    t.date     "read_at"
+    t.integer  "rank"
+    t.integer  "category_id"
+    t.text     "review"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "items_tags", force: :cascade do |t|
+    t.integer "item_id"
+    t.integer "tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "tag_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
