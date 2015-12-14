@@ -1,0 +1,38 @@
+.global-nav {
+  text-align: center;
+  background-color: rgb(139, 175, 191);
+
+  .menu-nav {
+    display: inline-block;
+    float:left;
+  }
+
+  .login-nav {
+    display: inline-block;
+    float:right;
+  }
+
+  .nav-item {
+    display: inline-block;
+    margin: 0 10px;
+    color: #666;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+
+    a {
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      transition: 0.15s;
+    }
+
+    a:hover {
+      background-color: #d03c56;
+      color: white;
+    }
+  }
+}

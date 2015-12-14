@@ -6,21 +6,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track'
     = csrf_meta_tags
   %body
-    %header
-      %nav
-        - if user_signed_in?
-          Logged in as
-          %strong= current_user.email
-          = link_to 'プロフィール変更', edit_user_registration_path
-          |
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-        - else
-          = link_to "登録", new_user_registration_path
-          |
-          = link_to "ログイン", new_user_session_path
-  - if notice
-    %p.alert.alert-success= notice
-  - if alert
-    %p.alert.alert-danger= alert
-  %main.main
-    = yield
+    %header.header
+      = render 'layouts/globalnav'
+    %main.main.wrapper.clearfix
+      = yield

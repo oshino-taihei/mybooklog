@@ -1,0 +1,79 @@
+$aLinkColor: #d03c56;
+$bodyColor: #333;
+
+html {
+  font-size: 62.5%;
+}
+body {
+  color: $bodyColor;
+  font-size: 1.2rem;
+  font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+  margin: auto;
+
+  .header {
+    width: 100%;
+    height: 80px;
+  }
+
+  .wrapper {
+    width: 970px;
+    margin: 0 30px 0;
+  }
+
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a:link, a:visited, a:hover, a:active {
+  color: $aLinkColor;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th{
+    text-align: left;
+    vertical-align: top;
+    color: $bodyColor;
+    background-color: #eee;
+    border: 1px solid #b9b9b9;
+  }
+  tbody {
+    tr:nth-of-type(even) {
+      background-color: #eee;
+    }
+    tr:nth-of-type(odd) {
+      background-color: #fff;
+    }
+    tr.total {
+      background-color: #ddf;
+      text-align: right;
+    }
+  }
+
+  td{
+    border: 1px solid #b9b9b9;
+  }
+}
+
+.h {
+  letter-spacing: 2px;
+  color: $bodyColor;
+}
+h1 {
+  color: $aLinkColor;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
