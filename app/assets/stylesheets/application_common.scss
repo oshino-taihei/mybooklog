@@ -6,6 +6,8 @@ html {
 }
 body {
   color: $bodyColor;
+  position: relative;
+  background-image: image-url("bg_booklog_body.gif");
   font-size: 1.2rem;
   font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
   margin: auto;
@@ -69,7 +71,9 @@ table {
   color: $bodyColor;
 }
 h1 {
-  color: $aLinkColor;
+  color: #1e1e1e;
+  font-weight: normal;
+  font-size: 3rem;
 }
 h2 {
   font-size: 2rem;
