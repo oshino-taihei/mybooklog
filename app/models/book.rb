@@ -1,10 +1,10 @@
 class Book < ActiveRecord::Base
-  def self.search_amazon(search_form)
-    res = Amazon::Ecs.item_search(search_form.keyword,
+  def self.search_amazon(keyword, page)
+    res = Amazon::Ecs.item_search(keyword,
            search_index:   'Books',
            response_group: 'Medium',
            country:        'jp',
-           item_page:      search_form.page
+           item_page:      page
          )
     books = []
     res.items.each do |item|
@@ -26,6 +26,7 @@ class Book < ActiveRecord::Base
       book = Book.new(asin: asin, url: url, title:title, image: image_url, author: authors, publisher: publisher, published_at: published_at, price: price)
       books << book
     end
-  books
+  total = [res.total_pages, 100].min
+  return [books, total]
   end
 end

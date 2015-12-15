@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'amazon-ecs'
 gem 'dotenv-rails'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'

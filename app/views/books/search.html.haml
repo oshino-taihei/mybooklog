@@ -28,3 +28,5 @@
         %td= book.publisher
         %td= book.published_at
         %td= book.price
+
+= paginate @books, :window => 10
