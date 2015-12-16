@@ -6,5 +6,20 @@
         - @item.errors.full_messages.each do |msg|
           %li= msg
 
+  .field
+    = f.label :book_id
+    = f.text_field :book_id
+  .field
+    = f.label :status
+    = f.text_field :status
+  .field
+    = f.label :read_at
+    = f.date_field :read_at
+  .field
+    = f.label :rank
+    = f.text_field :rank
+  .field
+    = f.label :review
+    = f.text_area :review
   .actions
     = f.submit 'Save'

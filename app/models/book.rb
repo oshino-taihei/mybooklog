@@ -1,4 +1,10 @@
 class Book < ActiveRecord::Base
+  has_many :items
+
+  MAX_PAGES = 100
+
+  # Amazon Product Advertising API にキーワードで書籍検索する
+  # 検索結果をBookテーブルに保存した上で、returnする
   def self.search_amazon(keyword, page)
     res = Amazon::Ecs.item_search(keyword,
            search_index:   'Books',
@@ -23,10 +29,18 @@ class Book < ActiveRecord::Base
         price = list_price.get('Amount')
       end
 
-      book = Book.new(asin: asin, url: url, title:title, image: image_url, author: authors, publisher: publisher, published_at: published_at, price: price)
+      book = Book.find_or_create_by(asin: asin) do |b|
+        b.url = url
+        b.title = title
+        b.image = image_url
+        b.author = authors
+        b.publisher = publisher
+        b.published_at = published_at
+        b.price = price
+      end
       books << book
     end
-  total = [res.total_pages, 100].min
+  total = [res.total_pages, MAX_PAGES].min
   return [books, total]
   end
 end
