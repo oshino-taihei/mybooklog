@@ -101,6 +101,33 @@ h3 {
   font-size: 1.5rem;
 }
 
+.search-form {
+  input[type=search] {
+    width: 250px;
+    padding: 7px;
+    margin: 0 10px 0;
+    font-size: 1.2em;
+    border: 1px #1e1e1e solid;
+    border-radius: 3px;
+    line-height: 1.5em;
+  }
+  input[type=submit] {
+    width: 100px;
+    padding: 7px;
+    margin: 0 10px 0;
+    font-size: 1.2em;
+    border: 1px solid #4ea6cc;
+    border-radius: 3px;
+    background-color: #4ea6cc;
+    color: white;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    border: 1px solid black;
+    background-color: black;
+  }
+}
+
 nav.pagination {
   padding: 20px;
   margin-bottom: 20px;
@@ -118,13 +145,15 @@ nav.pagination {
     color: #717171;
     text-shadow: 0px 1px 0px rgba(255,255,255, 1);
   }
-  .page:hover, .first:hover, .prev:hover, .next:hover, .last:hover {
-    background: #efefef;
-  }
   .current {
     background: #1e1e1e;
+    box-shadow: inset 0px 1px 0px rgba(0,0,0, 1), 0px 1px 3px rgba(0,0,0, .1);
     text-shadow: 0px 1px 0px rgba(0,0,0, 1);
     color: white !important;
+  }
+  .page:hover, .first:hover, .prev:hover, .next:hover, .last:hover {
+    background: #efefef;
+    box-shadow: inset 0px 1px 0px #efefef, 0px 1px 3px rgba(0,0,0, .1);
   }
   a {
     color: #565656;
