@@ -21,6 +21,7 @@ group :development, :test do
   gem 'spring'
   gem 'hirb'
   gem 'hirb-unicode'
+  gem 'rails-erd'
 end
 
 group :development do
