@@ -22,6 +22,7 @@ group :development, :test do
   gem 'hirb'
   gem 'hirb-unicode'
   gem 'rails-erd'
+  gem 'better_errors'
 end
 
 group :development do
