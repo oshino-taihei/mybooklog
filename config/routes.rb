@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :items
   get 'books/search'
-  resources :books, param: :asin, only: [:show]
+  resources :books, param: :asin, only: [:show] do
+    resource :review
+  end
+  resources :reviews, only: [:index]
   get 'home/index'
   root 'home#index'
 end
