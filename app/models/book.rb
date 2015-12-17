@@ -41,6 +41,6 @@ class Book < ActiveRecord::Base
       books << book
     end
   total = [res.total_pages, MAX_PAGES].min
-  return [books, total]
+  [books, total]
   end
 end
