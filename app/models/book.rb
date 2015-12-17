@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  has_many :items
+  has_many :reviews
 
   MAX_PAGES = 100
 
