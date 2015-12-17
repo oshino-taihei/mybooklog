@@ -23,4 +23,5 @@
   %b 値段:
   = @book.price
 
+= link_to '本棚に登録', book_review_path(@book.asin), method: :post
 = link_to '戻る', :back

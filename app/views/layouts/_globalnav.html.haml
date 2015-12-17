@@ -7,7 +7,7 @@
       - if user_signed_in?
         %li.nav-item= current_user.email
         %li.nav-item= link_to '検索', books_search_path
-        %li.nav-item= link_to '本棚', items_path
+        %li.nav-item= link_to '本棚', reviews_path
         %li.nav-item= link_to 'プロファイル', edit_user_registration_path
         %li.nav-item= link_to 'ログアウト', destroy_user_session_path, method: :delete
       - else
