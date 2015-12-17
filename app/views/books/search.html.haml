@@ -7,28 +7,29 @@
 
 %br
 
-%table
-  %thead
-    %tr
-      %th 本棚
-      %th 画像
-      %th タイトル
-      %th 著者
-      %th ASIN
-      %th 出版社
-      %th 出版日
-      %th 価格
-
-  %tbody
-    - @books.each do |book|
+- if @books.present?
+  %table
+    %thead
       %tr
-        %td= link_to '登録情報', book_path(book.asin)
-        %td= link_to image_tag(book.image), book.url
-        %td= link_to book.title, book.url
-        %td= book.author
-        %td= book.asin
-        %td= book.publisher
-        %td= book.published_at
-        %td= book.price
+        %th 本棚
+        %th 画像
+        %th タイトル
+        %th 著者
+        %th ASIN
+        %th 出版社
+        %th 出版日
+        %th 価格
 
-= paginate @books, :window => 10
+    %tbody
+      - @books.each do |book|
+        %tr
+          %td= link_to '登録情報', book_path(book.asin)
+          %td= link_to image_tag(book.image), book.url
+          %td= link_to book.title, book.url
+          %td= book.author
+          %td= book.asin
+          %td= book.publisher
+          %td= book.published_at
+          %td= book.price
+
+  = paginate @books, :window => 10
