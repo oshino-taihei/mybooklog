@@ -7,19 +7,19 @@
           %li= msg
 
   .field
-    = f.label :status
-    = f.text_field :status
+    = f.label :status, 'ステータス'
+    = f.select :status, Review.statuses.keys
   .field
-    = f.label :read_at
+    = f.label :read_at, '読了日'
     = f.date_select :read_at
   .field
-    = f.label :rank
-    = f.number_field :rank
+    = f.label :rank, '評価★'
+    = f.select :rank, Review.ranks.keys
   .field
-    = f.label :category_id
+    = f.label :category_id, 'カテゴリー'
     = f.number_field :category_id
   .field
-    = f.label :text
+    = f.label :text, 'レビュー・感想'
     = f.text_area :text
   .actions
-    = f.submit 'Save'
+    = f.submit 'レビューを更新する'
