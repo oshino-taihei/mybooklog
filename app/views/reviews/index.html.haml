@@ -24,5 +24,5 @@
         %td= review.rank
         %td= review.category_id
         %td= review.text
-        %td= link_to 'Edit', edit_book_review_path(review.book.asin)
-        %td= link_to 'Destroy', book_review_path(review.book.asin), method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Edit', edit_book_review_path(review.book)
+        %td= link_to 'Destroy', book_review_path(review.book), method: :delete, data: { confirm: 'Are you sure?' }

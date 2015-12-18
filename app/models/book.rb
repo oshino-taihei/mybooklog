@@ -2,7 +2,15 @@ class Book < ActiveRecord::Base
   has_many :reviews
   has_many :users, through: :reviews
 
-  MAX_PAGES = 100
+  MAX_PAGES = 100 # Amazon Product Advertising APIの仕様におけるItemPageパラメータの上限
+
+  # BookのURLでidの代わりにasin使うためにto_keyとto_paramをオーバーライド
+  def to_key
+    asin
+  end
+  def to_param
+    asin
+  end
 
   # Amazon Product Advertising API にキーワードで書籍検索する
   # 検索結果をBookテーブルに保存した上で、returnする
