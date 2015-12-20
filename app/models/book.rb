@@ -24,7 +24,7 @@ class Book < ActiveRecord::Base
         book.small_image = item.get_hash('SmallImage').try!(:fetch, "URL")
         book.medium_image = item.get_hash('MediumImage').try!(:fetch, "URL")
         book.large_image = item.get_hash('LargeImage').try!(:fetch, "URL")
-        book.author = item.get_elements('Author').try!(:map) { |e| e.get_unescaped }.join(', ')
+        book.author = item.get_elements('Author').try!(:map) { |e| e.get_unescaped }.try!(:join, ',')
         book.publisher = item_attributes.get('Publisher')
         book.published_at = item_attributes.get('PublicationDate')
         book.price = item.get_element('ListPrice').try!(:get, 'Amount')
