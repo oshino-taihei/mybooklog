@@ -8,7 +8,9 @@ class CreateBooks < ActiveRecord::Migration
       t.date :published_at
       t.integer :price
       t.string :url
-      t.string :image
+      t.string :small_image
+      t.string :medium_image
+      t.string :large_image
 
       t.timestamps null: false
     end

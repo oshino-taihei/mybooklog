@@ -21,7 +21,9 @@ ActiveRecord::Schema.define(version: 20151217021111) do
     t.date     "published_at"
     t.integer  "price"
     t.string   "url"
-    t.string   "image"
+    t.string   "small_image"
+    t.string   "medium_image"
+    t.string   "large_image"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
