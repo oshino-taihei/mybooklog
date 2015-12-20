@@ -17,12 +17,13 @@ gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.0'
   gem 'spring'
   gem 'hirb'
   gem 'hirb-unicode'
   gem 'rails-erd'
   gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
