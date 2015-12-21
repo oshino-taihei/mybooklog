@@ -2,6 +2,11 @@
 
 %p 登録数:#{@reviews.size}
 
+.book-shelf.clearfix
+  - @reviews.each do |review|
+    .book-item
+      = link_to image_tag(review.book.medium_image), edit_book_review_path(review.book)
+
 %table
   %thead
     %tr
@@ -26,3 +31,14 @@
         %td= review.text
         %td= link_to 'Edit', edit_book_review_path(review.book)
         %td= link_to 'Destroy', book_review_path(review.book), method: :delete, data: { confirm: 'Are you sure?' }
+
+
+= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"
+:javascript
+  new Masonry('book-shelf', {
+    itemSelector: '.book-item',
+    columnWdith: 180,
+    gutter: 4,
+    transitionDuration: 0,
+    isFitWidth: true
+  });
