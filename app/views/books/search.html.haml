@@ -25,7 +25,7 @@
     %tbody
       - @books.each do |book|
         %tr
-          %td= link_to '登録情報', book_path(book.asin)
+          %td= review_link_to(book)
           %td= link_to image_tag(book.small_image), book.url
           %td= link_to book.title, book.url
           %td= book.author
