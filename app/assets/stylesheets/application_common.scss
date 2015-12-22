@@ -129,14 +129,17 @@ h3 {
     font-size: 1.2em;
   }
 }
+
+$buttonColor: #4ea6cc;
+$deleteButtonColor: #da4740;
 .actions {
   input {
     padding: 7px;
     margin: 20px 10px 10px;
     font-size: 1.2em;
-    border: 1px solid #4ea6cc;
     border-radius: 3px;
-    background-color: #4ea6cc;
+    border: 1px solid $buttonColor;
+    background-color: $buttonColor;
     color: white;
     cursor: pointer;
 
@@ -146,6 +149,13 @@ h3 {
     }
   }
 }
+.delete-button {
+  input {
+    border: 1px solid $deleteButtonColor;
+    background-color: $deleteButtonColor;
+  }
+}
+
 nav.pagination {
   padding: 20px;
   margin-bottom: 20px;
