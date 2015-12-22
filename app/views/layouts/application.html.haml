@@ -9,6 +9,11 @@
     %header.header
       = render 'layouts/globalnav'
     %main.main.clearfix
+      .notice
+        - if notice
+          .alert.alert-success= notice
+        - if alert
+          .alert.alert-danger= alert
       = yield
     %footer.footer
       = render 'layouts/footer'
