@@ -25,7 +25,8 @@
     %tbody
       - @books.each do |book|
         %tr
-          %td= review_link_to(book)
+          %td
+            .actions= review_link_to(book)
           %td= link_to image_tag(book.small_image), book.url
           %td= link_to book.title, book.url
           %td= book.author
