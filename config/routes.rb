@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'books/search'
-  resources :books, param: :asin, only: [:search] do
+  resources :books, param: :asin, only: [:index] do
     resource :review
   end
   resources :reviews, only: [:index]
