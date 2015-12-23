@@ -1,11 +1,11 @@
-.book-shelf {
-  width: 100vw;
-  .book-item {
-    display: block;
-    float: left;
-    margin: 10px;
-    padding: 5px 0 5px;
-    max-height: 200px;
-    width: 135px;
+.search-field {
+  input {
+    width: 250px;
+  }
+}
+
+.search-button {
+  input {
+    width: 100px;
   }
 }
