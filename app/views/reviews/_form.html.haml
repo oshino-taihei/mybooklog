@@ -1,3 +1,12 @@
+.book_details.clearfix
+  .image
+    = link_to image_tag(@book.small_image), @book.url
+  .body
+    .title
+      %p= @book.title
+    .authors
+      %p= @book.author
+
 - if @review
   = form_for(@review, url: book_review_path(@review.book), method: :patch) do |f|
     - if @review.errors.any?

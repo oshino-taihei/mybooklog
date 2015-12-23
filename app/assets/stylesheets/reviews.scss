@@ -1,3 +1,30 @@
+.book_details {
+  display: block;
+  background: #f0f0f0;
+  padding: 10px 0 10px;
+  margin-bottom: 20px;
+  border-top: 5px solid;
+  .image {
+    float: left;
+    margin-left: 10px;
+  }
+  .body {
+    float: left;
+    margin-left: 30px;
+    font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+    color: #333;
+    .title {
+      line-height: 1.4rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .authors {
+      line-height: 1.2rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
 .book-shelf {
   width: 100vw;
   .book-item {
