@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   end
   resources :reviews, only: [:index]
   resource :home, only: [:index]
-  root controller: :home, action: :index
+  root 'home#index'
 end
