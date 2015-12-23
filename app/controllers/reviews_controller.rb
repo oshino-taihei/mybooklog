@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_book, only: [:show, :new, :create, :edit, :update, :destroy]
-  before_action :set_book_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:new, :create]
+  before_action :set_book_and_review, only: [:show, :edit, :update, :destroy]
 
   def index
     @reviews = current_user.reviews
@@ -56,7 +56,8 @@ class ReviewsController < ApplicationController
       @book = Book.find_by(asin: params[:book_asin])
     end
 
-    def set_book_review
+    def set_book_and_review
+      set_book
       @review = current_user.reviews.find_by(book: @book)
     end
 

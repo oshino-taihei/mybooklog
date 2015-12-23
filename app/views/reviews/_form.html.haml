@@ -1,5 +1,5 @@
 - if @review
-  = form_for(@review, url: book_review_path(@review.book.asin), method: :patch) do |f|
+  = form_for(@review, url: book_review_path(@review.book), method: :patch) do |f|
     - if @review.errors.any?
       #error_explanation
         %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
