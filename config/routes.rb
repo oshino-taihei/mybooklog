@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     resource :review
   end
   resources :reviews, only: [:index]
-  get 'home/index'
-  root 'home#index'
+  resource :home, only: [:index]
+  root controller: :home, action: :index
 end
