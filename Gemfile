@@ -15,6 +15,7 @@ gem 'amazon-ecs'
 gem 'dotenv-rails'
 gem 'kaminari'
 gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 group :development, :test do
   gem 'byebug'
