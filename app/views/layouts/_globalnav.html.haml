@@ -5,7 +5,7 @@
   .login-nav
     %ul
       - if user_signed_in?
-        %li.nav-item= current_user.email
+        %li.nav-item= "#{current_user.name}さん"
         %li.nav-item= link_to '検索', books_path
         %li.nav-item= link_to '本棚', reviews_path
         %li.nav-item= link_to 'プロフィール', edit_user_registration_path
