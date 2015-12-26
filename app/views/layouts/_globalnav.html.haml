@@ -1,7 +1,7 @@
 .global-nav.clearfix
   .menu-nav
     %ul
-      %li.nav-item= link_to "HOME", "/"
+      %li.nav-item= link_to "HOME", root_path
   .login-nav
     %ul
       - if user_signed_in?
