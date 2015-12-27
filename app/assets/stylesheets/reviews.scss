@@ -24,24 +24,3 @@
     }
   }
 }
-
-.book-shelf {
-  width: 100vw;
-  .book-item {
-    display: block;
-    float: left;
-    margin: 10px;
-    padding: 5px 0 5px;
-    max-height: 200px;
-    width: 135px;
-
-    img {
-      box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
-    }
-
-    .book-rank {
-      color: #f5b629;
-      position: relative;
-    }
-  }
-}

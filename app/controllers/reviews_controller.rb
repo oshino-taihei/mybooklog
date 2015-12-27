@@ -3,10 +3,6 @@ class ReviewsController < ApplicationController
   before_action :set_book, only: [:new, :create]
   before_action :set_book_and_review, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @reviews = current_user.reviews
-  end
-
   def show
   end
 

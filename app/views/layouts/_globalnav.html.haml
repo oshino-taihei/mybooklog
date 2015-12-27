@@ -6,8 +6,9 @@
     %ul
       - if user_signed_in?
         %li.nav-item= "#{current_user.name}さん"
-        %li.nav-item= link_to '検索', books_path
-        %li.nav-item= link_to '本棚', reviews_path
+        %li.nav-item= link_to '本を探す', books_path
+        %li.nav-item= link_to 'ユーザを探す', users_path
+        %li.nav-item= link_to '本棚', user_path(current_user)
         %li.nav-item= link_to 'プロフィール', edit_user_registration_path
         %li.nav-item= link_to 'ログアウト', destroy_user_session_path, method: :delete
       - else
