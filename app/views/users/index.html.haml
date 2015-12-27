@@ -1,0 +1,17 @@
+%h1 Listing users
+
+%table
+  %thead
+    %tr
+      %th ユーザ名
+      %th プロフィール
+      %th
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td= user.description
+        %td= link_to 'Show', user
+
+%br

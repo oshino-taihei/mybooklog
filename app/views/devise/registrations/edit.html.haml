@@ -11,6 +11,9 @@
     = f.label :name
     = f.text_field :name
   .field
+    = f.label :description
+    = f.text_area :description
+  .field
     = f.label :password
     %i
       (#{t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it")})
