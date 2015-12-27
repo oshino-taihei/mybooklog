@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title mybooklog
+    %title= yield(:title).presence || "mybooklog"
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track'
     = csrf_meta_tags
