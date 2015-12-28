@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 20151223125931) do
     t.datetime "updated_at",   null: false
   end
 
+  add_index "follows", ["from_user_id", "to_user_id"], name: "index_follows_on_from_user_id_and_to_user_id", unique: true
+  add_index "follows", ["from_user_id"], name: "index_follows_on_from_user_id"
+  add_index "follows", ["to_user_id"], name: "index_follows_on_to_user_id"
+
   create_table "reviews", force: :cascade do |t|
     t.integer  "user_id",                 null: false
     t.integer  "book_id",                 null: false

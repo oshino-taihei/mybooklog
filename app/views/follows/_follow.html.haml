@@ -1,0 +1,5 @@
+= form_for(current_user.from_follows.build) do |f|
+  .field
+    = hidden_field_tag :id, user.id
+  .actions
+    = f.submit "フォローする"

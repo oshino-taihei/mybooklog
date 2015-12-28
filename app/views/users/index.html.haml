@@ -6,6 +6,7 @@
       %th ユーザ名
       %th プロフィール
       %th 本棚
+      %th フォロー
 
   %tbody
     - @users.each do |user|
@@ -13,5 +14,10 @@
         %td= user.name
         %td= user.description
         %td= link_to '本棚を見る', user
-
-%br
+        %td
+          - if user == current_user
+            あなた
+          - elsif current_user.following?(user)
+            = render partial: 'follows/unfollow', locals: { user: user }
+          - else
+            = render partial: 'follows/follow', locals: { user: user }
