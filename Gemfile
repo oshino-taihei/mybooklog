@@ -21,12 +21,11 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 3.0'
   gem 'spring'
-end
-
-group :development do
   gem 'letter_opener', '~> 1.1.0'
   gem 'hirb'
   gem 'hirb-unicode'
+  gem 'pry-rails'
+  gem 'pry-byebug'
   gem 'rails-erd'
   gem 'better_errors'
   gem 'binding_of_caller'
