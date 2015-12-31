@@ -3,6 +3,9 @@
   %h1 #{@user.name}の本棚
   .books-num
     %p 登録アイテム数: #{@user.reviews.size}
+  .follows
+    .follow-to= follow_to(@user)
+    #{@user.following.size}フォロー | #{@user.followers.size}フォロワー
 
 .book-shelf.clearfix
   - @user.reviews.each do |review|

@@ -1,5 +1,14 @@
-= form_for(current_user.from_follows.build) do |f|
-  .field
-    = hidden_field_tag :id, user.id
-  .actions
-    = f.submit "フォローする"
+- if user == current_user
+  あなた
+- elsif current_user.following?(user)
+  = form_for(current_user.from_follows.find_by(to_user_id: user.id), html: { method: :delete }) do |f|
+    .field
+      = hidden_field_tag :id, user.id
+    .actions
+      = f.submit "フォロー解除"
+- else
+  = form_for(current_user.from_follows.build) do |f|
+    .field
+      = hidden_field_tag :id, user.id
+    .actions
+      = f.submit "フォローする"

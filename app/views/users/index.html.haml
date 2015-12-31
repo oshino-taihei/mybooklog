@@ -14,10 +14,4 @@
         %td= user.name
         %td= user.description
         %td= link_to '本棚を見る', user
-        %td
-          - if user == current_user
-            あなた
-          - elsif current_user.following?(user)
-            = render partial: 'follows/unfollow', locals: { user: user }
-          - else
-            = render partial: 'follows/follow', locals: { user: user }
+        %td= follow_to(user)
