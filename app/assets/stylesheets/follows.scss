@@ -1,3 +1,7 @@
-// Place all the styles related to the Follows controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$unfollowButtonColor: #f5b629;
+.unfollow {
+  input {
+    background-color: $unfollowButtonColor;
+    border: 1px solid $unfollowButtonColor;
+  }
+}
