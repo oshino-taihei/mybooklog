@@ -1,3 +1,26 @@
+.user-info {
+  display: block;
+  width: 80%;
+  padding: 1px 15px 15px;
+  border-radius: 8px;
+  background-color: white;
+  color: #1e1e1e;
+
+  .follows {
+    text-align: center;
+    letter-spacing: 1px;
+    
+    .follow-to, .following-num {
+      float: left;
+      margin: 0 10px 0;
+    }
+    .following-num {
+      padding-top: 20px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
 .book-shelf {
   width: 100vw;
   .book-item {

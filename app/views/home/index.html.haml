@@ -1,1 +1,5 @@
-%h1 ホーム
+- title = "#{current_user.name}さんのホーム"
+- provide :title, title
+%h1= title
+
+= render partial: 'users/info', locals: {user: current_user}

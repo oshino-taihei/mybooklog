@@ -1,0 +1,7 @@
+.user-info
+  %h1 #{user.name}の本棚
+  .books-num
+    %p 登録アイテム数: #{user.reviews.size}
+  .follows.clearfix
+    .follow-to= follow_to(user)
+    .following-num #{user.following.size}フォロー | #{user.followers.size}フォロワー

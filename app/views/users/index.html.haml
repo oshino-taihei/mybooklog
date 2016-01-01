@@ -5,13 +5,11 @@
     %tr
       %th ユーザ名
       %th プロフィール
-      %th 本棚
       %th フォロー
 
   %tbody
     - @users.each do |user|
       %tr
-        %td= user.name
+        %td= link_to user.name, user
         %td= user.description
-        %td= link_to '本棚を見る', user
         %td= follow_to(user)
