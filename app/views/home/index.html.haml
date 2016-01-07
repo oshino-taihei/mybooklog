@@ -1,5 +1,6 @@
-- title = "#{current_user.name}さんのホーム"
+- title = user_signed_in? ? "#{current_user.name}さんのホーム" : "ホーム"
 - provide :title, title
 %h1= title
 
-= render partial: 'users/info', locals: {user: current_user}
+- if user_signed_in?
+  = render partial: 'users/info', locals: {user: current_user}
