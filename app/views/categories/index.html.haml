@@ -1,0 +1,23 @@
+%h1 カテゴリーの設定
+
+%h2 カテゴリーの追加
+
+= render 'form'
+
+%h2 カテゴリーの一覧
+
+%br
+
+%table
+  %thead
+    %tr
+      %th カテゴリ名
+      %th 削除
+
+  %tbody
+    - @categories.each do |category|
+      %tr
+        %td= category.category_name
+        %td
+          .actions.delete-button
+            = button_to '削除', category_path(category), method: :delete, data: { confirm: 'このカテゴリを削除しますか？このカテゴリを設定済みの本は「カテゴリ未設定」に更新されます' }

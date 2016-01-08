@@ -27,7 +27,9 @@
       = f.select :rank, Review.ranks.keys
     .field
       = f.label :category_id, 'カテゴリー'
-      = f.number_field :category_id
+      = f.collection_select :category_id, current_user.categories, :id, :category_name, include_blank: '-'
+      .field.actions
+        = link_to 'カテゴリーを新規追加する', categories_path
     .field
       = f.label :text, 'レビュー・感想'
       = f.text_area :text

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :reviews
   has_many :books, through: :reviews
+  has_many :categories
   has_many :from_follows, class_name:  "Follow",
                      foreign_key: "from_user_id",
                      dependent:   :destroy
