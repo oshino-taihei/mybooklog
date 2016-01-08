@@ -17,7 +17,13 @@
   %tbody
     - @categories.each do |category|
       %tr
-        %td= category.category_name
+        %td
+          = form_for(category) do |f|
+            .category_name.clearfix
+              .field
+                = f.text_field :category_name
+              .actions
+                = f.submit '更新'
         %td
           .actions.delete-button
             = button_to '削除', category_path(category), method: :delete, data: { confirm: 'このカテゴリを削除しますか？このカテゴリを設定済みの本は「カテゴリ未設定」に更新されます' }
