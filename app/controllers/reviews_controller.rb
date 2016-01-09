@@ -58,6 +58,6 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-      params.require(:review).permit(:status, :read_at, :rank, :category_id, :text)
+      params.require(:review).permit(:status, :read_at, :rank, :category_id, :tag_names, :text)
     end
 end

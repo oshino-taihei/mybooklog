@@ -29,6 +29,11 @@
       = f.label :category_id, 'カテゴリー'
       = f.collection_select :category_id, current_user.categories, :id, :category_name, include_blank: '-'
       = link_to 'カテゴリーを新規追加する', categories_path
+    .field.tag_names
+      = f.label :tag_names, 'タグ'
+      %ul.list
+        %li ※タグはカンマ(,)区切りで複数入力できます。
+      = f.text_area :tag_names
     .field
       = f.label :text, 'レビュー・感想'
       = f.text_area :text
