@@ -84,11 +84,13 @@ table {
   border-collapse: collapse;
 
   th{
-    text-align: left;
+    text-align: center;
+    line-height: 3em;
     vertical-align: top;
-    color: $bodyColor;
-    background-color: #eee;
+    color: #656565;
+    background: #f0f0f0;
     border: 1px solid #b9b9b9;
+    border-top: 5px solid;
   }
   tbody {
     tr:nth-of-type(even) {
