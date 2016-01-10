@@ -11,6 +11,7 @@ class Review < ActiveRecord::Base
     .search_status(review_search_form.status)
     .search_rank(review_search_form.rank)
     .search_category_id(review_search_form.category_id)
+    .search_tag_id(review_search_form.tag_id)
   end
 
   scope :search_keyword, ->(keyword) do
@@ -27,6 +28,10 @@ class Review < ActiveRecord::Base
 
   scope :search_category_id, ->(category_id) do
     where(category_id: category_id) if category_id.present?
+  end
+
+  scope :search_tag_id, ->(tag_id) do
+    joins(:tags).where('tags.id': tag_id) if tag_id.present?
   end
 
   def tag_names
