@@ -4,7 +4,16 @@
 = form_for @review_search_form, url: user_path(@user), html: {method: :get} do |f|
   .search_form
     .field.search-field
-      = f.search_field :keyword, placeholder: 'アイテムを検索'
+      = f.search_field :keyword, placeholder: '本のタイトルで検索'
+    .field
+      = f.label :status, '読書状況'
+      = f.select :status, Review.statuses, include_blank: '全て'
+    .field
+      = f.label :rank, '評価★'
+      = f.select :rank, Review.ranks, include_blank: '全て'
+    .field
+      = f.label :category_id, 'カテゴリー'
+      = f.collection_select :category_id, current_user.categories, :id, :category_name, include_blank: '全て'
     .actions.search-button
       = f.submit '検索'
 .actions
