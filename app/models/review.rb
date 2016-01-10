@@ -6,6 +6,29 @@ class Review < ActiveRecord::Base
   enum status: %w(- 読みたい いま読んでる 読み終わった 積読)
   enum rank: %w(評価しない ★ ★★ ★★★ ★★★★ ★★★★★)
 
+  scope :search, ->(review_search_form) do
+    search_keyword(review_search_form.keyword)
+    .search_status(review_search_form.status)
+    .search_rank(review_search_form.rank)
+    .search_category_id(review_search_form.category_id)
+  end
+
+  scope :search_keyword, ->(keyword) do
+    joins(:book).where('title like ?', "%#{keyword}%") if keyword.present?
+  end
+
+  scope :search_status, ->(status) do
+    where(status: status) if status.present?
+  end
+
+  scope :search_rank, ->(rank) do
+    where(rank: rank) if rank.present?
+  end
+
+  scope :search_category_id, ->(category_id) do
+    where(category_id: category_id) if category_id.present?
+  end
+
   def tag_names
     self.tags.map(&:tag_name).join(', ')
   end

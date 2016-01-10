@@ -8,12 +8,7 @@ class UsersController < ApplicationController
   def show
     @review_search_form = ReviewSearchForm.new(params[:review_search_form])
     @reviews = @user.reviews
-    if params[:review_search_form]
-      @reviews = @reviews.joins(:book).where('title like ?', "%#{@review_search_form.keyword}%") unless @review_search_form.keyword.empty?
-      @reviews = @reviews.where(status: @review_search_form.status) unless @review_search_form.status.empty?
-      @reviews = @reviews.where(rank: @review_search_form.rank) unless @review_search_form.rank.empty?
-      @reviews = @reviews.where(category_id: @review_search_form.category_id) unless @review_search_form.category_id.empty?
-    end
+    @reviews = @reviews.search(@review_search_form) if params[:review_search_form]
   end
 
   private
