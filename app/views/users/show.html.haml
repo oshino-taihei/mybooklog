@@ -1,8 +1,17 @@
 - provide :title, "#{@user.name}の本棚"
 = render partial: 'info', locals: {user: @user}
 
+= form_for @review_search_form, url: user_path(@user), html: {method: :get} do |f|
+  .search_form
+    .field.search-field
+      = f.search_field :keyword, placeholder: 'アイテムを検索'
+    .actions.search-button
+      = f.submit '検索'
+.actions
+  = button_to '検索条件をクリア', user_path(@user), method: :get
+
 .book-shelf.clearfix
-  - @user.reviews.each do |review|
+  - @reviews.each do |review|
     .book-item
       = link_to image_tag(review.book.medium_image), edit_book_review_path(review.book)
       .book-rank

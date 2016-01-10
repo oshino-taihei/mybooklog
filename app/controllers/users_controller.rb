@@ -6,7 +6,12 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @review_search_form = ReviewSearchForm.new(params[:review_search_form])
+    if params[:review_search_form]
+      @reviews = @user.reviews.joins(:book).where('title like ?', "%#{@review_search_form.keyword}%")
+    else
+      @reviews = @user.reviews
+    end
   end
 
   private
