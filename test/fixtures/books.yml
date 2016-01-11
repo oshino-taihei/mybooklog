@@ -1,21 +1,131 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+4104528021:
+  title: 川瀬敏郎 一日一花
+  asin: 4104528021
+  author: 川瀬 敏郎
+  publisher: 新潮社
+  published_at:
+  price: 3780
+  url: http://www.amazon.co.jp/%E5%B7%9D%E7%80%AC%E6%95%8F%E9%83%8E-%E4%B8%80%E6%97%A5%E4%B8%80%E8%8A%B1-%E5%B7%9D%E7%80%AC-%E6%95%8F%E9%83%8E/dp/4104528021%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4104528021
+  small_image: http://ecx.images-amazon.com/images/I/51K4my48Y4L._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/51K4my48Y4L._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/51K4my48Y4L.jpg
 
-one:
-  title: MyString
-  asin: MyString
-  author: MyString
-  publisher: MyString
-  published_at: 2015-12-11
-  price: 1
-  url: MyString
-  image: MyString
+4774158798:
+  title: パーフェクトRuby (PERFECT SERIES 6)
+  asin: 4774158798
+  author: Rubyサポーターズ,すがわら まさのり,寺田 玄太郎,三村 益隆,近藤 宇智朗,橋立 友宏,関口 亮一
+  publisher: 技術評論社
+  published_at: 2013-08-10
+  price: 3456
+  url: http://www.amazon.co.jp/%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88Ruby-PERFECT-SERIES-6-Ruby%E3%82%B5%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%BA/dp/4774158798%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4774158798
+  small_image: http://ecx.images-amazon.com/images/I/51K0jUf%2BiEL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/51K0jUf%2BiEL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/51K0jUf%2BiEL.jpg
 
-two:
-  title: MyString
-  asin: MyString
-  author: MyString
-  publisher: MyString
-  published_at: 2015-12-11
-  price: 1
-  url: MyString
-  image: MyString
+4873117437:
+  title: メタプログラミングRuby 第2版
+  asin: 4873117437
+  author: Paolo Perrotta
+  publisher: オライリージャパン
+  published_at: 2015-10-10
+  price: 3240
+  url: http://www.amazon.co.jp/%E3%83%A1%E3%82%BF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0Ruby-%E7%AC%AC2%E7%89%88-Paolo-Perrotta/dp/4873117437%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4873117437
+  small_image: http://ecx.images-amazon.com/images/I/5102wwx0VzL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/5102wwx0VzL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/5102wwx0VzL.jpg
+
+B00GJGOPU0:
+  title: 作りながら学ぶRuby入門 第2版
+  asin: B00GJGOPU0
+  author: 久保秋 真
+  publisher: SBクリエイティブ
+  published_at: 2012-11-22
+  price:
+  url: http://www.amazon.co.jp/%E4%BD%9C%E3%82%8A%E3%81%AA%E3%81%8C%E3%82%89%E5%AD%A6%E3%81%B6Ruby%E5%85%A5%E9%96%80-%E7%AC%AC2%E7%89%88-%E4%B9%85%E4%BF%9D%E7%A7%8B-%E7%9C%9F-ebook/dp/B00GJGOPU0%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00GJGOPU0
+  small_image: http://ecx.images-amazon.com/images/I/310Od%2BNfWdL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/310Od%2BNfWdL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/310Od%2BNfWdL.jpg
+
+4774164100:
+  title: Ruby on Rails 4 アプリケーションプログラミング
+  asin: 4774164100
+  author: 山田 祥寛
+  publisher: 技術評論社
+  published_at: 2014-04-11
+  price: 3780
+  url: http://www.amazon.co.jp/Ruby-Rails-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-%E5%B1%B1%E7%94%B0-%E7%A5%A5%E5%AF%9B/dp/4774164100%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4774164100
+  small_image: http://ecx.images-amazon.com/images/I/51lycs3O%2BrL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/51lycs3O%2BrL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/51lycs3O%2BrL.jpg
+
+4774178020:
+  title: APIデザインケーススタディ ~Rubyの実例から学ぶ。問題に即したデザインと普遍の考え方 (WEB+DB PRESS plus)
+  asin: 4774178020
+  author: 田中 哲
+  publisher: 技術評論社
+  published_at: 2015-12-16
+  price: 3002
+  url: http://www.amazon.co.jp/API%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B9%E3%82%B9%E3%82%BF%E3%83%87%E3%82%A3-%7ERuby%E3%81%AE%E5%AE%9F%E4%BE%8B%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E3%80%82%E5%95%8F%E9%A1%8C%E3%81%AB%E5%8D%B3%E3%81%97%E3%81%9F%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%A8%E6%99%AE%E9%81%8D%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9-WEB-PRESS-plus/dp/4774178020%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4774178020
+  small_image: http://ecx.images-amazon.com/images/I/514Ve4nSUZL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/514Ve4nSUZL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/514Ve4nSUZL.jpg
+
+B00WJQCVPU:
+  title: たのしいRuby 第4版
+  asin: B00WJQCVPU
+  author: 高橋 征義,後藤 裕蔵
+  publisher: SBクリエイティブ
+  published_at: 2013-05-31
+  price:
+  url: http://www.amazon.co.jp/%E3%81%9F%E3%81%AE%E3%81%97%E3%81%84Ruby-%E7%AC%AC4%E7%89%88-%E9%AB%98%E6%A9%8B-%E5%BE%81%E7%BE%A9-ebook/dp/B00WJQCVPU%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00WJQCVPU
+  small_image: http://ecx.images-amazon.com/images/I/41LzXe6WFxL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/41LzXe6WFxL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/41LzXe6WFxL.jpg
+
+4797380357:
+  title: Rubyによるクローラー開発技法 巡回・解析機能の実装と21の運用例
+  asin: 4797380357
+  author: るびきち,佐々木 拓郎
+  publisher: SBクリエイティブ
+  published_at: 2014-08-25
+  price: 3218
+  url: http://www.amazon.co.jp/Ruby%E3%81%AB%E3%82%88%E3%82%8B%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC%E9%96%8B%E7%99%BA%E6%8A%80%E6%B3%95-%E5%B7%A1%E5%9B%9E%E3%83%BB%E8%A7%A3%E6%9E%90%E6%A9%9F%E8%83%BD%E3%81%AE%E5%AE%9F%E8%A3%85%E3%81%A821%E3%81%AE%E9%81%8B%E7%94%A8%E4%BE%8B-%E3%82%8B%E3%81%B3%E3%81%8D%E3%81%A1/dp/4797380357%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4797380357
+  small_image: http://ecx.images-amazon.com/images/I/51qDobozaNL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/51qDobozaNL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/51qDobozaNL.jpg
+
+4873113946:
+  title: プログラミング言語 Ruby
+  asin: 4873113946
+  author: まつもと ゆきひろ,David Flanagan
+  publisher: オライリージャパン
+  published_at: 2009-01-26
+  price: 4104
+  url: http://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E-Ruby-%E3%81%BE%E3%81%A4%E3%82%82%E3%81%A8-%E3%82%86%E3%81%8D%E3%81%B2%E3%82%8D/dp/4873113946%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4873113946
+  small_image: http://ecx.images-amazon.com/images/I/41CGDEMgyoL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/41CGDEMgyoL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/41CGDEMgyoL.jpg
+
+4797386290:
+  title: たのしいRuby 第5版
+  asin: 4797386290
+  author: 高橋 征義,後藤 裕蔵
+  publisher: SBクリエイティブ
+  published_at: 2016-02-26
+  price: 3024
+  url: http://www.amazon.co.jp/%E3%81%9F%E3%81%AE%E3%81%97%E3%81%84Ruby-%E7%AC%AC5%E7%89%88-%E9%AB%98%E6%A9%8B-%E5%BE%81%E7%BE%A9/dp/4797386290%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4797386290
+  small_image: http://ecx.images-amazon.com/images/I/41GhmdNEZdL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/41GhmdNEZdL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/41GhmdNEZdL.jpg
+
+4797372273:
+  title: たのしいRuby 第4版
+  asin: 4797372273
+  author: 高橋 征義,後藤 裕蔵
+  publisher: ソフトバンククリエイティブ
+  published_at: 2013-06-04
+  price: 2808
+  url: http://www.amazon.co.jp/%E3%81%9F%E3%81%AE%E3%81%97%E3%81%84Ruby-%E7%AC%AC4%E7%89%88-%E9%AB%98%E6%A9%8B-%E5%BE%81%E7%BE%A9/dp/4797372273%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4797372273
+  small_image: http://ecx.images-amazon.com/images/I/41WMC2%2B5rfL._SL75_.jpg
+  medium_image: http://ecx.images-amazon.com/images/I/41WMC2%2B5rfL._SL160_.jpg
+  large_image: http://ecx.images-amazon.com/images/I/41WMC2%2B5rfL.jpg
