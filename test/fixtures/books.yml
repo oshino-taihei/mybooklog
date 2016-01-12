@@ -3,13 +3,12 @@
   asin: 4104528021
   author: 川瀬 敏郎
   publisher: 新潮社
-  published_at:
+  published_at: 
   price: 3780
   url: http://www.amazon.co.jp/%E5%B7%9D%E7%80%AC%E6%95%8F%E9%83%8E-%E4%B8%80%E6%97%A5%E4%B8%80%E8%8A%B1-%E5%B7%9D%E7%80%AC-%E6%95%8F%E9%83%8E/dp/4104528021%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4104528021
   small_image: http://ecx.images-amazon.com/images/I/51K4my48Y4L._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/51K4my48Y4L._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/51K4my48Y4L.jpg
-
 4774158798:
   title: パーフェクトRuby (PERFECT SERIES 6)
   asin: 4774158798
@@ -21,7 +20,6 @@
   small_image: http://ecx.images-amazon.com/images/I/51K0jUf%2BiEL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/51K0jUf%2BiEL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/51K0jUf%2BiEL.jpg
-
 4873117437:
   title: メタプログラミングRuby 第2版
   asin: 4873117437
@@ -33,19 +31,17 @@
   small_image: http://ecx.images-amazon.com/images/I/5102wwx0VzL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/5102wwx0VzL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/5102wwx0VzL.jpg
-
 B00GJGOPU0:
   title: 作りながら学ぶRuby入門 第2版
   asin: B00GJGOPU0
   author: 久保秋 真
   publisher: SBクリエイティブ
   published_at: 2012-11-22
-  price:
+  price: 
   url: http://www.amazon.co.jp/%E4%BD%9C%E3%82%8A%E3%81%AA%E3%81%8C%E3%82%89%E5%AD%A6%E3%81%B6Ruby%E5%85%A5%E9%96%80-%E7%AC%AC2%E7%89%88-%E4%B9%85%E4%BF%9D%E7%A7%8B-%E7%9C%9F-ebook/dp/B00GJGOPU0%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00GJGOPU0
   small_image: http://ecx.images-amazon.com/images/I/310Od%2BNfWdL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/310Od%2BNfWdL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/310Od%2BNfWdL.jpg
-
 4774164100:
   title: Ruby on Rails 4 アプリケーションプログラミング
   asin: 4774164100
@@ -57,7 +53,6 @@ B00GJGOPU0:
   small_image: http://ecx.images-amazon.com/images/I/51lycs3O%2BrL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/51lycs3O%2BrL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/51lycs3O%2BrL.jpg
-
 4774178020:
   title: APIデザインケーススタディ ~Rubyの実例から学ぶ。問題に即したデザインと普遍の考え方 (WEB+DB PRESS plus)
   asin: 4774178020
@@ -69,19 +64,17 @@ B00GJGOPU0:
   small_image: http://ecx.images-amazon.com/images/I/514Ve4nSUZL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/514Ve4nSUZL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/514Ve4nSUZL.jpg
-
 B00WJQCVPU:
   title: たのしいRuby 第4版
   asin: B00WJQCVPU
   author: 高橋 征義,後藤 裕蔵
   publisher: SBクリエイティブ
   published_at: 2013-05-31
-  price:
+  price: 
   url: http://www.amazon.co.jp/%E3%81%9F%E3%81%AE%E3%81%97%E3%81%84Ruby-%E7%AC%AC4%E7%89%88-%E9%AB%98%E6%A9%8B-%E5%BE%81%E7%BE%A9-ebook/dp/B00WJQCVPU%3FSubscriptionId%3DAKIAJUVB6VN4QQNZ7YNA%26tag%3Dtotech-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00WJQCVPU
   small_image: http://ecx.images-amazon.com/images/I/41LzXe6WFxL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/41LzXe6WFxL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/41LzXe6WFxL.jpg
-
 4797380357:
   title: Rubyによるクローラー開発技法 巡回・解析機能の実装と21の運用例
   asin: 4797380357
@@ -93,7 +86,6 @@ B00WJQCVPU:
   small_image: http://ecx.images-amazon.com/images/I/51qDobozaNL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/51qDobozaNL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/51qDobozaNL.jpg
-
 4873113946:
   title: プログラミング言語 Ruby
   asin: 4873113946
@@ -105,7 +97,6 @@ B00WJQCVPU:
   small_image: http://ecx.images-amazon.com/images/I/41CGDEMgyoL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/41CGDEMgyoL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/41CGDEMgyoL.jpg
-
 4797386290:
   title: たのしいRuby 第5版
   asin: 4797386290
@@ -117,7 +108,6 @@ B00WJQCVPU:
   small_image: http://ecx.images-amazon.com/images/I/41GhmdNEZdL._SL75_.jpg
   medium_image: http://ecx.images-amazon.com/images/I/41GhmdNEZdL._SL160_.jpg
   large_image: http://ecx.images-amazon.com/images/I/41GhmdNEZdL.jpg
-
 4797372273:
   title: たのしいRuby 第4版
   asin: 4797372273
