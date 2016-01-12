@@ -23,8 +23,11 @@
   = button_to '検索条件をクリア', user_path(@user), method: :get
 
 .book-shelf.clearfix
-  - @reviews.each do |review|
-    .book-item
-      = link_to image_tag(review.book.medium_image), edit_book_review_path(review.book)
-      .book-rank
-        = rank_star(review)
+  - if @reviews.empty?
+    %p 本がありません。
+  - else
+    - @reviews.each do |review|
+      .book-item
+        = link_to image_tag(review.book.medium_image), edit_book_review_path(review.book)
+        .book-rank
+          = rank_star(review)
