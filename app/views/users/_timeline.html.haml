@@ -1,0 +1,16 @@
+%h2 友達のタイムライン
+%p #{user.name}さんがフォローしているユーザーの最新の更新情報を表示しています。
+.timeline
+  - user.recent_followings_reviews.each do |review|
+    .event
+      .message
+        %p.message-body
+          = link_to review.user.name, user_path(review.user)
+          さんが『
+          = link_to content_tag(:span, review.book.title), edit_book_review_path(review.book)
+          』を本棚に登録しました。(#{review.created_at})
+      .book-box.clearfix
+        .image= link_to image_tag(review.book.small_image), edit_book_review_path(review.book)
+        .wrapper
+          .title= link_to review.book.title, edit_book_review_path(review.book)
+          .authors 著者:#{review.book.author} / #{review.book.publisher} / #{review.book.published_at}
