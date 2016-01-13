@@ -35,7 +35,7 @@ class Review < ActiveRecord::Base
   end
 
   def tag_names
-    self.tags.map(&:tag_name).join(', ')
+    self.tags.pluck(:tag_name).join(', ')
   end
 
   def tag_names=(tag_names)
