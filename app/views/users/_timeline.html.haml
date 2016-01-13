@@ -13,4 +13,4 @@
         .image= link_to image_tag(review.book.small_image), edit_book_review_path(review.book)
         .wrapper
           .title= link_to review.book.title, edit_book_review_path(review.book)
-          .authors 著者:#{review.book.author} / #{review.book.publisher} / #{review.book.published_at}
+          .authors 著者:#{review.book.author} | #{review.book.publisher} | #{review.book.published_at}
