@@ -1,6 +1,6 @@
 .user-info {
   display: block;
-  width: 80%;
+  width: 100%;
   padding: 1px 15px 15px;
   border-radius: 8px;
   background-color: white;
@@ -22,7 +22,7 @@
 }
 
 .book-shelf {
-  width: 100vw;
+  width: 100%;
   .book-item {
     display: block;
     float: left;
@@ -43,7 +43,7 @@
 }
 
 .bookshelf-summary {
-  width: 780px;
+  width: 100%;
   border: 1px #cdcdcd solid;
   border-top: 3px #1e1e1e solid;
   border-collapse: separate;
@@ -86,7 +86,7 @@
 }
 
 .timeline {
-  width: 780px;
+  width: 100%;
   .event {
     padding-bottom: 15px;
     border-bottom: 1px #e4e4e4 solid;
@@ -119,7 +119,6 @@
           color: #d03c56;
         }
       }
-
     }
   }
 }
