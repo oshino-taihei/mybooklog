@@ -6,3 +6,13 @@
   = render partial: 'users/info', locals: {user: current_user}
   = render partial: 'users/bookshelf_summary', locals: {user: current_user}
   = render partial: 'users/timeline', locals: {user: current_user}
+- else
+  .hello
+    .login
+      %p.hello-message ようこそ、ブクログへ。 ブクログに登録している方は、下記からログインしてください。
+      .actions
+        = button_to 'ログインする', new_user_session_path, method: :get
+    .register
+      %p.hello-message まだ登録していない方はこちらから登録してください。登録は半熟たまごがゆであがるくらい（5分くらい）でできます。もちろん、無料です。
+      .actions
+        = button_to '新規登録する', new_user_registration_path, method: :get
