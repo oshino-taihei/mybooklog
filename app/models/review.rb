@@ -39,7 +39,7 @@ class Review < ActiveRecord::Base
   end
 
   def tag_names=(tag_names)
-    new_tags = tag_names.split(',').map(&:strip).map do |tag_name|
+    new_tags = tag_names.split(',').map(&:strip).reject(&:blank?).map do |tag_name|
       Tag.find_or_create_by(tag_name: tag_name)
     end
     self.tags = new_tags
