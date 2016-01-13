@@ -33,4 +33,18 @@ class User < ActiveRecord::Base
     self.from_follows.exists?(to_user_id: other_user.id)
   end
 
+  def status_count
+    existed_status_count = self.reviews.group(:status).order(:status).count(:status)
+    all_status_count = Review.statuses.map do |status_label, status_value|
+      [status_label, existed_status_count[status_value] || 0]
+    end
+    # statusでorder byしているので先頭は0("-":未設定)になるが、
+    # 表示上はこれだけを一番後ろにもっていきたいため、rotateしている
+    all_status_count.rotate.to_h
+  end
+
+  def recent_reviews_by_status(status_value, limit_count: 5)
+    self.reviews.where(status: Review.statuses[status_value]).order(:created_at).limit(limit_count)
+  end
+
 end

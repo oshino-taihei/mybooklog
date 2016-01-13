@@ -1,0 +1,9 @@
+%p #{user.name}さんの本棚の状態や通知を確認できます。
+%h2 読書状況
+.bookshelf-summary.clearfix
+  - user.status_count.each do |status, count|
+    .item-box
+      %p.item-header= "#{status} [全#{count}件]"
+      %ul.reviews
+      - user.recent_reviews_by_status(status).each do |review|
+        %li.review-item= link_to image_tag(review.book.small_image), edit_book_review_path(review.book)

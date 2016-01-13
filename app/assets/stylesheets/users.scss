@@ -9,7 +9,7 @@
   .follows {
     text-align: center;
     letter-spacing: 1px;
-    
+
     .follow-to, .following-num {
       float: left;
       margin: 0 10px 0;
@@ -38,6 +38,45 @@
     .book-rank {
       color: #f5b629;
       position: relative;
+    }
+  }
+}
+
+.bookshelf-summary {
+  width: 780px;
+  border: 1px #cdcdcd solid;
+  border-top: 3px #1e1e1e solid;
+  border-collapse: separate;
+  border-spacing: 10px;
+  padding-top: 10px;
+  background: #fff;
+
+  .item-header {
+    position: relative;
+    display: block;
+    padding: 8px 10px;
+    margin: 0;
+    background: #f0f0f0;
+    color: #1e1e1e;
+    font-size: 12px;
+  }
+
+  .item-box {
+    display: block;
+    float: left;
+    width: 360px;
+    min-height: 130px;
+    margin: 5px;
+
+    .review-item {
+      display: inline-block;
+      margin: 0 3px;
+      color: #666;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+    img {
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
     }
   }
 }

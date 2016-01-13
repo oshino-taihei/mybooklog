@@ -4,3 +4,4 @@
 
 - if user_signed_in?
   = render partial: 'users/info', locals: {user: current_user}
+  = render partial: 'users/bookshelf_summary', locals: {user: current_user}
