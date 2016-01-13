@@ -22,6 +22,7 @@ group :development, :test do
   gem 'web-console', '~> 3.0'
   gem 'spring'
   gem 'letter_opener', '~> 1.1.0'
+  gem 'rspec-rails'
   gem 'hirb'
   gem 'hirb-unicode'
   gem 'pry-rails'
