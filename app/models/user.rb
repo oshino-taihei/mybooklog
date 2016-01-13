@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
     self.reviews.where(status: Review.statuses[status_value]).order(created_at: :desc).limit(limit_count)
   end
 
-  def recent_followings_reviews
-    Review.includes(:user, :book).where(user: self.following).order(created_at: :desc)
+  def recent_followings_reviews(limit_count: 50)
+    Review.includes(:user, :book).where(user: self.following).order(created_at: :desc).limit(limit_count)
   end
 end
