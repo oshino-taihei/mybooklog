@@ -6,7 +6,8 @@ namespace :export do
       def to_yaml(book)
         yaml = <<ENDOFYAML
 #{book.asin}:
-  title: #{book.title}
+  id: #{book.id}
+  title: '#{book.title}'
   asin: #{book.asin}
   author: #{book.author}
   publisher: #{book.publisher}

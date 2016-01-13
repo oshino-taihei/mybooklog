@@ -1,12 +1,4 @@
-289901223:
-  user_id: 1
-  book_id: 791373656
-  status: 0
-  read_at: 
-  rank: 3
-  category_id: 
-  text: 
-312651902:
+141621968:
   user_id: 1
   book_id: 919181687
   status: 0
@@ -14,15 +6,7 @@
   rank: 1
   category_id: 
   text: 
-695725224:
-  user_id: 1
-  book_id: 255641997
-  status: 2
-  read_at: 
-  rank: 5
-  category_id: 
-  text: 
-743729846:
+620814947:
   user_id: 1
   book_id: 282576129
   status: 1
@@ -30,11 +14,43 @@
   rank: 2
   category_id: 
   text: 
-1052238170:
+830473027:
   user_id: 1
   book_id: 433996587
   status: 3
   read_at: 
   rank: 5
   category_id: 5
+  text: 
+848371981:
+  user_id: 1
+  book_id: 791373656
+  status: 0
+  read_at: 
+  rank: 3
+  category_id: 
+  text: 
+901458447:
+  user_id: 1
+  book_id: 255641997
+  status: 2
+  read_at: 
+  rank: 5
+  category_id: 
+  text: 
+1062964088:
+  user_id: 2
+  book_id: 1064249501
+  status: 2
+  read_at: 
+  rank: 3
+  category_id: 
+  text: 
+1062964089:
+  user_id: 2
+  book_id: 1064249508
+  status: 3
+  read_at: 
+  rank: 4
+  category_id: 
   text: 
