@@ -2,9 +2,10 @@ class Book < ActiveRecord::Base
   has_many :reviews
   has_many :users, through: :reviews
 
+  validates :asin, presence: true, uniqueness: true
+
   MAX_ITEM_PAGE = 100 # Amazon Product Advertising APIの仕様におけるItemPageパラメータの上限
 
-  # BookのURLでidの代わりにasin使うためto_paramをオーバーライド
   def to_param
     asin
   end
