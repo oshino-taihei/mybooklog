@@ -4,3 +4,33 @@ p.search-note {
   margin-top: 2px;
   color: #666;
 }
+
+.result-item {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+
+  .image-box, .info-box {
+    display: block;
+    float: left;
+  }
+  .image-box {
+    width: 150px;
+  }
+  .info-box {
+    width: 600px;
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .book-info {
+      padding-bottom: 20px;
+    }
+  }
+}

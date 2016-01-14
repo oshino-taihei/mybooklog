@@ -12,35 +12,21 @@
 %br
 
 - if @books.present?
-  %table
-    %thead
-      %tr
-        %th 本棚
-        %th 画像
-        %th タイトル
-        %th 著者
-        %th ASIN
-        %th 出版社
-        %th 出版日
-        %th 価格
-
-    %tbody
-      - @books.each do |book|
-        %tr
-          %td
-            .actions
-              - if current_user.books.exists?(book)
-                .shown{id: "#{update_button_id(book)}"}= update_review_button_to(book)
-                .hidden{id: "#{create_button_id(book)}"}= create_review_button_to(book)
-              - else
-                .hidden{id: "#{update_button_id(book)}"}= update_review_button_to(book)
-                .shown{id: "#{create_button_id(book)}"}= create_review_button_to(book)
-          %td= link_to image_tag(book.small_image), book.url
-          %td= link_to book.title, book.url
-          %td= book.author
-          %td= book.asin
-          %td= book.publisher
-          %td= book.published_at
-          %td= book.price
+  .search-result
+    - @books.each do |book|
+      .result-item.clearfix
+        .image-box
+          .image= link_to image_tag(book.medium_image), book.url
+        .info-box
+          .book-info
+            .title= link_to book.title, book.url
+            .authors #{book.author} / #{book.publisher} / #{book.published_at} / #{number_to_currency book.price}
+          .actions
+            - if current_user.books.exists?(book)
+              .shown{id: "#{update_button_id(book)}"}= update_review_button_to(book)
+              .hidden{id: "#{create_button_id(book)}"}= create_review_button_to(book)
+            - else
+              .hidden{id: "#{update_button_id(book)}"}= update_review_button_to(book)
+              .shown{id: "#{create_button_id(book)}"}= create_review_button_to(book)
 
   = paginate @books, window: 10
