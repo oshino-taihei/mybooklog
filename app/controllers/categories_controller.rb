@@ -8,39 +8,26 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @category.update(category_params)
-        format.html { redirect_to categories_path, notice: 'カテゴリーを更新しました' }
-        format.json { head :no_content }
-      else
-        format.html { render :index }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
-      end
+    if @category.update(category_params)
+      redirect_to categories_path, notice: 'カテゴリーを更新しました'
+    else
+      render :index
     end
   end
 
   def create
     @category = current_user.categories.build(category_params)
-    respond_to do |format|
-      if @category.save
-        format.html { redirect_to categories_path, notice: 'カテゴリーを追加しました' }
-        format.json { render :show, status: :created, location: @category }
-      else
-        format.html do
-          @categories = current_user.categories.all
-          render :index
-        end
-        format.json { render json: @category.errors, status: :unprocessable_entity }
-      end
+    if @category.save
+      redirect_to categories_path, notice: 'カテゴリーを追加しました'
+    else
+      @categories = current_user.categories.all
+      render :index
     end
   end
 
   def destroy
-    @category.destroy
-    respond_to do |format|
-      format.html { redirect_to categories_path, notice: 'カテゴリーを削除しました' }
-      format.json { head :no_content }
-    end
+    @category.destroy!
+    redirect_to categories_path, notice: 'カテゴリーを削除しました'
   end
 
   private
