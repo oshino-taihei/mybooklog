@@ -28,12 +28,16 @@ ActiveRecord::Schema.define(version: 20151223125931) do
     t.datetime "updated_at",   null: false
   end
 
+  add_index "books", ["asin"], name: "index_books_on_asin", unique: true
+
   create_table "categories", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "category_name"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
+
+  add_index "categories", ["user_id", "category_name"], name: "index_categories_on_user_id_and_category_name", unique: true
 
   create_table "follows", force: :cascade do |t|
     t.integer  "from_user_id"
@@ -58,16 +62,22 @@ ActiveRecord::Schema.define(version: 20151223125931) do
     t.datetime "updated_at",              null: false
   end
 
+  add_index "reviews", ["user_id", "book_id"], name: "index_reviews_on_user_id_and_book_id", unique: true
+
   create_table "reviews_tags", force: :cascade do |t|
     t.integer "review_id"
     t.integer "tag_id"
   end
+
+  add_index "reviews_tags", ["review_id", "tag_id"], name: "index_reviews_tags_on_review_id_and_tag_id", unique: true
 
   create_table "tags", force: :cascade do |t|
     t.string   "tag_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "tags", ["tag_name"], name: "index_tags_on_tag_name", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
