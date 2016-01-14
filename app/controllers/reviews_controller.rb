@@ -19,6 +19,7 @@ class ReviewsController < ApplicationController
     respond_to do |format|
       if @review.save
         format.html { redirect_to :back, notice: '本棚に登録しました' }
+        format.js
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }

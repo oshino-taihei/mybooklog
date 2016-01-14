@@ -114,6 +114,7 @@ table {
   letter-spacing: 2px;
   color: $bodyColor;
 }
+
 h1 {
   color: #1e1e1e;
   font-weight: normal;
@@ -129,6 +130,10 @@ h3 {
 span {
   font-weight: bold;
   color: #da4740;
+}
+
+.hidden {
+  display: none;
 }
 
 .search_form {

@@ -28,7 +28,16 @@
       - @books.each do |book|
         %tr
           %td
-            .actions= review_button_to(book)
+            - if current_user.books.exists?(book)
+              .actions{id: "book_#{book.asin}_update"}
+                = button_to 'レビューを書く', edit_book_review_path(book), method: :get
+              .actions.hidden{id: "book_#{book.asin}_create"}
+                = button_to '本棚に登録', book_review_path(book), method: :post, remote: true
+            - else
+              .actions.hidden{id: "book_#{book.asin}_update"}
+                = button_to 'レビューを書く', edit_book_review_path(book), method: :get
+              .actions{id: "book_#{book.asin}_create"}
+                = button_to '本棚に登録', book_review_path(book), method: :post, remote: true
           %td= link_to image_tag(book.small_image), book.url
           %td= link_to book.title, book.url
           %td= book.author
