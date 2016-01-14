@@ -1,6 +1,6 @@
 %h1 本の検索
 
-= form_for @book_search_form, url: books_path, html: {method: :get} do |f|
+= form_for(@book_search_form, url: books_path, method: :get) do |f|
   .search_form
     .field.search-field
       = f.search_field :keyword, placeholder: 'アイテムを検索'
@@ -46,4 +46,4 @@
           %td= book.published_at
           %td= book.price
 
-  = paginate @books, :window => 10
+  = paginate @books, window: 10
