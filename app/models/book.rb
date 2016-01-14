@@ -11,12 +11,13 @@ class Book < ActiveRecord::Base
   end
 
   def self.search_amazon(keyword, page)
-    res = Amazon::Ecs.item_search(keyword,
-           search_index:   'Books',
-           response_group: 'Medium',
-           country:        'jp',
-           item_page:      page
-         )
+    res = Amazon::Ecs.item_search(
+            keyword,
+            search_index:   'Books',
+            response_group: 'Medium',
+            country:        'jp',
+            item_page:      page
+          )
     books = res.items.map do |item|
       Book.find_or_create_by!(asin: item.get('ASIN')) do |book|
         item_attributes = item.get_element('ItemAttributes')
