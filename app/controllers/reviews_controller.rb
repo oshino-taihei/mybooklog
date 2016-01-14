@@ -1,10 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_book, only: [:new, :create]
-  before_action :set_book_and_review, only: [:show, :edit, :update, :destroy]
-
-  def show
-  end
+  before_action :set_book_and_review, only: [:edit, :update, :destroy]
 
   def new
     @review = current_user.reviews.build(book: @book)
@@ -15,37 +12,21 @@ class ReviewsController < ApplicationController
 
   def create
     @review = current_user.reviews.build(book: @book)
-
+    @review.save!
     respond_to do |format|
-      if @review.save
-        format.html { redirect_to :back, notice: '本棚に登録しました' }
-        format.js
-        format.json { render :show, status: :created, location: @review }
-      else
-        format.html { render :new }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
-      end
+      format.html { redirect_to :back, notice: '本棚に登録しました' }
+      format.js
     end
   end
 
   def update
-    respond_to do |format|
-      if @review.update(review_params)
-        format.html { redirect_to user_path(current_user), notice: 'レビューを更新しました' }
-        format.json { render :show, status: :ok, location: @review }
-      else
-        format.html { render :edit }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
-      end
-    end
+    @review.update!(review_params)
+    redirect_to user_path(current_user), notice: 'レビューを更新しました'
   end
 
   def destroy
-    @review.destroy
-    respond_to do |format|
-      format.html { redirect_to user_path(current_user), notice: '本棚から削除しました' }
-      format.json { head :no_content }
-    end
+    @review.destroy!
+    redirect_to user_path(current_user), notice: '本棚から削除しました'
   end
 
   private

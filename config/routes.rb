@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, param: :name, only: [:index, :show]
   resources :categories, only: [:index, :update, :create, :destroy]
   resources :books, param: :asin, only: [:index] do
-    resource :review
+    resource :review, except: [:show]
   end
   resources :follows, only: [:create, :destroy]
 
