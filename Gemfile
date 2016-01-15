@@ -17,9 +17,12 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
+group :development do
+  gem 'web-console', '~> 3.0'
+end
+
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 3.0'
   gem 'spring'
   gem 'letter_opener', '~> 1.1.0'
   gem 'rspec-rails'
