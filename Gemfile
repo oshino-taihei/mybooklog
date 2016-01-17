@@ -27,6 +27,7 @@ group :development, :test do
   gem 'letter_opener', '~> 1.1.0'
   gem 'rspec-rails', '~> 3.3.0'
   gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'faker', '~> 1.6.0'
   gem 'hirb'
   gem 'hirb-unicode'
   gem 'pry-rails'
