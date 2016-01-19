@@ -35,5 +35,6 @@ group :development, :test do
   gem 'rails-erd'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'bullet'
   gem 'quiet_assets'
 end
