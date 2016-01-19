@@ -1,13 +1,9 @@
 - unless user == current_user
   - if current_user.following?(user)
-    = form_for(current_user.from_follows.find_by(to_user_id: user.id), method: :delete) do |f|
-      .field
-        = hidden_field_tag :id, user.id
+    = form_tag([user, :follow], method: :delete) do
       .actions.unfollow
-        = f.submit "フォロー解除"
+        = submit_tag "フォロー解除"
   - else
-    = form_for(current_user.from_follows.build) do |f|
-      .field
-        = hidden_field_tag :id, user.id
+    = form_tag([user, :follow]) do
       .actions.follow
-        = f.submit "フォローする"
+        = submit_tag "フォローする"
