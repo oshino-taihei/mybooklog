@@ -22,11 +22,9 @@
             .title= link_to book.title, book.url
             .authors #{book.author} / #{book.publisher} / #{book.published_at} / #{number_to_currency book.price}
           .actions
-            - if current_user.books.exists?(book)
-              .shown{id: "#{update_button_id(book)}"}= update_review_button_to(book)
-              .hidden{id: "#{create_button_id(book)}"}= create_review_button_to(book)
-            - else
-              .hidden{id: "#{update_button_id(book)}"}= update_review_button_to(book)
-              .shown{id: "#{create_button_id(book)}"}= create_review_button_to(book)
+            .update-review{id: "#{update_button_id(book)}", class: current_user.books.exists?(book) ? "shown" : "hidden"}
+              = button_to 'レビューを書く', edit_book_review_path(book), method: :get
+            .create-review{id: "#{create_button_id(book)}", class: current_user.books.exists?(book) ? "hidden" : "shown"}
+              = button_to '本棚に登録', book_review_path(book), method: :post, remote: true
 
   = paginate @books, window: 10
