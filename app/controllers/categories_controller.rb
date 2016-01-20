@@ -7,7 +7,11 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category.update!(category_params)
+    if @category.update(category_params)
+      render :update
+    else
+      render :error
+    end
   end
 
   def create
