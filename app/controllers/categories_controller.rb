@@ -7,10 +7,12 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    if @category.update(category_params)
-      render :update
-    else
-      render :error
+    respond_to do |format|
+      if @category.update(category_params)
+        format.js
+      else
+        format.js { render :error }
+      end
     end
   end
 
