@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
 
   def update
     @review.update!(review_params)
-    redirect_to user_path(current_user), notice: 'レビューを更新しました'
+    redirect_to edit_book_review_path(@review.book), notice: 'レビューを更新しました'
   end
 
   def destroy
