@@ -17,6 +17,11 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'web-console', '~> 3.0'
 end
