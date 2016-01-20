@@ -1,5 +1,7 @@
 %h1 ユーザの検索
 
+%p ユーザ名のところをクリックすると、そのユーザの本棚を見ることができます。
+
 %table
   %thead
     %tr
@@ -10,6 +12,6 @@
   %tbody
     - @users.each do |user|
       %tr
-        %td= link_to user.name, user
+        %td= link_to content_tag(:span, user.name), user
         %td= user.description
         %td= follow_to(user)
