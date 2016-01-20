@@ -3,9 +3,9 @@
 %h1= title
 
 - if user_signed_in?
-  = render partial: 'users/info', locals: {user: current_user}
-  = render partial: 'users/bookshelf_summary', locals: {user: current_user}
-  = render partial: 'users/timeline', locals: {user: current_user}
+  = render 'users/info', user: current_user
+  = render 'users/bookshelf_summary', user: current_user
+  = render 'users/timeline', user: current_user
 - else
   .hello
     .login
