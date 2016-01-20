@@ -3,16 +3,11 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:update, :destroy]
 
   def index
-    @categories = current_user.categories.all
     @category = current_user.categories.build
   end
 
   def update
-    if @category.update(category_params)
-      redirect_to categories_path, notice: 'カテゴリーを更新しました'
-    else
-      render :index
-    end
+    @category.update!(category_params)
   end
 
   def create
@@ -20,7 +15,6 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to categories_path, notice: 'カテゴリーを追加しました'
     else
-      @categories = current_user.categories.all
       render :index
     end
   end

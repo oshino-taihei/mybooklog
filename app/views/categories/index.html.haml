@@ -3,11 +3,21 @@
 
 %h2 カテゴリーの追加
 
-= render 'form'
+= form_for(@category) do |f|
+  - if @category.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@category.errors.count, "error")} prohibited this category from being saved:"
+      %ul
+        - @category.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field.category_input
+    = f.label :category_name, "カテゴリー名(#{Category::NAME_MAX_LENGTH}文字以内)"
+    = f.text_field :category_name, maxlength: Category::NAME_MAX_LENGTH, placeholder: '例)恋愛小説、課題図書、自分ベスト１０など'
+  .actions
+    = f.submit 'カテゴリーを追加する'
 
 %h2 カテゴリーの一覧
-
-%br
 
 %table
   %thead
@@ -16,15 +26,15 @@
       %th 削除
 
   %tbody
-    - @categories.each do |category|
+    - current_user.categories.all.each do |category|
       %tr
         %td
-          = form_for(category) do |f|
+          = form_for(category, remote:true) do |f|
             .category_name.clearfix
               .field
-                = f.text_field :category_name
+                = f.text_field :category_name, maxlength: Category::NAME_MAX_LENGTH
               .actions
                 = f.submit '更新'
         %td
           .actions.delete-button
-            = button_to '削除', category_path(category), method: :delete, data: { confirm: 'このカテゴリを削除しますか？このカテゴリを設定済みの本は「カテゴリ未設定」に更新されます' }
+            = button_to '削除', category_path(category), method: :delete, data: { confirm: 'このカテゴリを削除しますか？このカテゴリーを設定済みの本は「カテゴリー未設定("-")」に更新されます' }
