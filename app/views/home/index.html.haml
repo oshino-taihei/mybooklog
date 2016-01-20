@@ -4,7 +4,9 @@
 
 - if user_signed_in?
   = render 'users/info', user: current_user
+  %h2 読書状況
   = render 'users/bookshelf_summary', user: current_user
+  %h2 友達のタイムライン
   = render 'users/timeline', user: current_user
 - else
   .hello
