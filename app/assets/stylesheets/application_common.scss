@@ -161,6 +161,7 @@ span {
 }
 
 $buttonColor: #4ea6cc;
+$editButtonColor: #f5b629;
 $deleteButtonColor: #da4740;
 .actions {
   input {
@@ -184,6 +185,10 @@ $deleteButtonColor: #da4740;
     border: 1px solid $deleteButtonColor;
     background-color: $deleteButtonColor;
   }
+}
+input.edit-button {
+  border: 1px solid $editButtonColor;
+  background-color: $editButtonColor;
 }
 
 nav.pagination {

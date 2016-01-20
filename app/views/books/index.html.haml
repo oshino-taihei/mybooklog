@@ -23,8 +23,8 @@
             .authors #{book.author} / #{book.publisher} / #{book.published_at} / #{number_to_currency book.price}
           .actions
             .update-review{id: "#{update_button_id(book)}", class: current_user.books.exists?(book) ? "shown" : "hidden"}
-              = button_to 'レビューを書く', edit_book_review_path(book), method: :get
+              = button_to 'レビューを書く', edit_book_review_path(book), method: :get, class: "edit-button"
             .create-review{id: "#{create_button_id(book)}", class: current_user.books.exists?(book) ? "hidden" : "shown"}
-              = button_to '本棚に登録', book_review_path(book), method: :post, remote: true
+              = button_to '本棚に登録する', book_review_path(book), method: :post, remote: true
 
   = paginate @books, window: 10
