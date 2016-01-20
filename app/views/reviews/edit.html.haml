@@ -10,6 +10,7 @@
       %p= @book.author
 
 - if @review
+  %p あなたの本棚に登録されている本のレビューを編集します。
   = form_for(@review, url: book_review_path(@review.book), method: :patch) do |f|
     - if @review.errors.any?
       #error_explanation
