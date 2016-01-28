@@ -1,6 +1,4 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!
-
   def index
     @book_search_form = BookSearchForm.new(params[:book_search_form])
     if params[:book_search_form]
