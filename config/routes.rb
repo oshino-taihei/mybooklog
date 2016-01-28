@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   resources :categories, only: [:index, :update, :create, :destroy]
   resources :books, param: :asin, only: [:index] do
-    resource :review, except: [:show]
+    resource :review, except: [:new, :show]
   end
 
   root 'home#index'
