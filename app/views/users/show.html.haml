@@ -13,10 +13,10 @@
       = f.select :rank, Review.ranks, include_blank: '全て'
     .field
       = f.label :category_id, 'カテゴリー'
-      = f.collection_select :category_id, current_user.categories, :id, :category_name, include_blank: '全て'
+      = f.collection_select :category_id, @user.categories, :id, :category_name, include_blank: '全て'
     .field
       = f.label :tag, 'タグ'
-      = f.collection_select :tag_id, current_user.tags.uniq, :id, :tag_name, include_blank: '全て'
+      = f.collection_select :tag_id, @user.tags.uniq, :id, :tag_name, include_blank: '全て'
     .actions.search-button
       = f.submit '検索'
 .actions
