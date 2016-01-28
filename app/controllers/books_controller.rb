@@ -6,7 +6,7 @@ class BooksController < ApplicationController
     if params[:book_search_form]
       page = params[:page] || '1'
       begin
-        @books, total = Book::search_amazon(@book_search_form.keyword, page)
+        @books, total = Book.search_amazon(@book_search_form.keyword, page)
         @books = Kaminari.paginate_array(@books, total_count: total).page(page).per(10)
       rescue Amazon::RequestError => e
         flash.now[:alert] = "問合せがエラーとなりました。しばらくたってから、再検索して下さい。"
