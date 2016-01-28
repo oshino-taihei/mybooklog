@@ -2,10 +2,6 @@ class ReviewsController < ApplicationController
   before_action :set_book
   before_action :set_review, only: [:edit, :update, :destroy]
 
-  def new
-    @review = current_user.reviews.build(book: @book)
-  end
-
   def create
     @review = current_user.reviews.build(book: @book)
     @review.save!
