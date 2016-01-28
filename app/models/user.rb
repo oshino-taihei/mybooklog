@@ -22,15 +22,15 @@ class User < ActiveRecord::Base
   end
 
   def follow(other_user)
-    self.from_follows.create(to_user_id: other_user.id)
+    self.from_follows.create(to_user: other_user)
   end
 
   def unfollow(other_user)
-    self.from_follows.find_by(to_user_id: other_user.id).destroy
+    self.from_follows.find_by(to_user: other_user).destroy
   end
 
   def following?(other_user)
-    self.from_follows.exists?(to_user_id: other_user.id)
+    self.from_follows.exists?(to_user: other_user)
   end
 
   def status_count
