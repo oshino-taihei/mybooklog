@@ -14,7 +14,7 @@ class FollowsController < ApplicationController
 
   private
     def set_user
-      @user = User.find_by(name: params[:user_name])
+      @user = User.find_by!(name: params[:user_name])
     end
 
 end
