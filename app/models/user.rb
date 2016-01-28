@@ -34,9 +34,9 @@ class User < ActiveRecord::Base
   end
 
   def status_count
-    existed_status_count = self.reviews.group(:status).order(:status).count(:status)
+    existing_status_count = self.reviews.group(:status).order(:status).count(:status)
     all_status_count = Review.statuses.map do |status_label, status_value|
-      [status_label, existed_status_count[status_value] || 0]
+      [status_label, existing_status_count[status_value] || 0]
     end
     # statusでorder byしているので先頭は0("-":未設定)になるが、
     # 表示上はこれだけを一番後ろにもっていきたいため、rotateしている
